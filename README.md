@@ -75,8 +75,6 @@ Notes / tips / rules-of-thumb:
 
 > NP=1e6  # number of photons to run \*per processor\* (per "task", see header above)
 
-> NP_RAY_SPLIT=5e5  # number of rays at which the computation is split to save memory, default 5e5
-
 > X_BEAM_WIDTH=10  # mm, width of rectangular laser beam profile
 
 > Z_BEAM_HEIGHT=18  # mm, height of rectangular laser beam profile
@@ -84,10 +82,6 @@ Notes / tips / rules-of-thumb:
 > BEAM_X_OFFSET=15  # mm, how much the circular beam is shifted in the +x direction (to fall on top of the wedge target)
 
 > BEAM_Z_OFFSET=0  # mm, how much the circular beam is shifted in the +z direction (to fall on top of the wedge target)
-
-> LAMBDA=532  # nm, laser photon wavelength
-
-> DIVERGENCE=0  # 0 if no divergence (collimated/parallel rays), non-zero if beam divergence (radians)
 
 Notes / tips / rules-of-thumb: 
 1. BASE_DIRECTORY should be your personal working directory where all the files are stored, the same as "save_dir" in 01_load_and_save_e-_density.ipynb's first code cell.
