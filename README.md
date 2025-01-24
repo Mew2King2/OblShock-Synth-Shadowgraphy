@@ -23,19 +23,19 @@ Note: the "--offline" flag might be needed to the last command above; let me kno
 
 Next, to test whether mpi4py is probably going to work or not:
   
-  conda deactivate
+> conda deactivate
   
-  module purge
+> module purge
   
-  module load anaconda3/2023.07
+> module load anaconda3/2023.07
   
-  source activate conda_v1
+> source activate conda_v1
   
-  module load gcc/6.2.0
+> module load gcc/6.2.0
   
-  module load openmpi/3.0.4
+> module load openmpi/3.0.4
   
-  python -c "import mpi4py"
+> python -c "import mpi4py"
 
 If there are no errors, then I think it is good to go.*  If there are errors, we might need to more directly do what I did, referencing this guide: https://researchcomputing.princeton.edu/support/knowledge-base/mpi4py
 
