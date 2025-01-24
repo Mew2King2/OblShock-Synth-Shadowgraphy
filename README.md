@@ -52,10 +52,15 @@ Go to Kernel / Restart Kernal and Run All Cells, and give it a few minutes.  You
 SSH into an Engaging terminal and navigate to your working directory (where all the files from this GitHub repo are stored, and where the e- density mesh .npy file is stored from Step #1/3.  Open 02_ray_tracing_rect_beam.slurm in a text editor.  In the first 27 lines of the file, you might wish to make adjustments to the following variables (under "#!/bin/bash" and "# input parameters"):
 
 > "#!/bin/bash"
+
 > #SBATCH --nodes=2                  # node count -N
+
 > #SBATCH --ntasks=16                # total number of tasks (cores) -n
+
 > #SBATCH --ntasks-per-node=8        # this converts the PBS -l mpiprocs=num (from example_MPI.py comment header)
+
 > #SBATCH --time=01:30:00            # total run time limit (HH:MM:SS)
+
 > #SBATCH --mail-user=your_at_mit_dot_edu_email_here
 
 Notes / tips / rules-of-thumb: 
@@ -64,15 +69,24 @@ Notes / tips / rules-of-thumb:
 3. --ntasks should be set to the product of --nodes times --ntasks-per-node (which should remain set to 8).
 4. Change --mail-user=your_at_mit_dot_edu_email_here to your MIT email.  
 
-> # input parameters
+> \# input parameters
+
 > BASE_DIRECTORY=/net/eofe-data005/psfclab001/lansing/docs/ray-tracing/COBRA/OblShock-3/  # base directory where all files are stored/run
+
 > NP=1e6  # number of photons to run \*per processor\* (per "task", see header above)
+
 > NP_RAY_SPLIT=5e5  # number of rays at which the computation is split to save memory, default 5e5
+
 > X_BEAM_WIDTH=10  # mm, width of rectangular laser beam profile
+
 > Z_BEAM_HEIGHT=18  # mm, height of rectangular laser beam profile
+
 > BEAM_X_OFFSET=15  # mm, how much the circular beam is shifted in the +x direction (to fall on top of the wedge target)
+
 > BEAM_Z_OFFSET=0  # mm, how much the circular beam is shifted in the +z direction (to fall on top of the wedge target)
+
 > LAMBDA=532  # nm, laser photon wavelength
+
 > DIVERGENCE=0  # 0 if no divergence (collimated/parallel rays), non-zero if beam divergence (radians)
 
 Notes / tips / rules-of-thumb: 
