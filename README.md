@@ -9,15 +9,15 @@
 
 SSH into an Engaging terminal.  (I use MobaXterm on Windows.)  Then, line-by-line, type and enter (execute) the following commands in sequence:
   
-  conda deactivate
+> conda deactivate
   
-  module purge
+> module purge
   
-  module load anaconda3/2023.07
+> module load anaconda3/2023.07
   
-  conda clean --all
+> conda clean --all
   
-  conda env create -f conda_v1.yml
+> conda env create -f conda_v1.yml
 
 Note: the "--offline" flag might be needed to the last command above; let me know if there are issues and this is one thing we can try.
 
