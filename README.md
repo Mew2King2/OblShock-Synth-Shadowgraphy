@@ -102,6 +102,12 @@ In my case, I run "squeue -u lansing", and I see a list of the jobs I have submi
 
 Open a Jupyter Notebook session on Engaging-on-Demand (website).  Open this Jupyter Notebook file.  
 
-In theory, the only user inputs that you should change are the three in the very top code cell.  Ensure that x_beam_width, z_beam_height, beam_x_offset, beam_z_offset, etc. are consistent with X_BEAM_WIDTH, Z_BEAM_HEIGHT, BEAM_X_OFFSET, BEAM_Z_OFFSET, etc. from 02_ray_tracing_rect_beam.slurm.  Once you are ready to go, go to Kernel / Restart Kernal and Run All Cells, and give it a few minutes.  You should see a plot of the 3D e- density mesh with the laser beam cross-section overlaid as a green dashed box, and then 3 grayscale plots.  "s0" is a plot of all the rays at the entrance of the 3D e- density mesh, where they were initialized (in this case, at y=-20 mm).  "rf" is a plot of the rays at the exit of the 3D e- density mesh, after they have completed their traced paths (in this case, at y=+20 mm).  "focused" is the actual shadowgraph which takes into account ray-transfer-matrix (RTM) analysis, propagating the exiting rays onto a desired y=? mm imaging plane, accounting for a finite-sized lens.  The lens parameters, shadowgraph resolution and vmin/vmax counts/pixel, etc. can all be changed at the very top/first coding cell in this Jupyter Notebook.  
+In theory, the only user inputs that you should change are the three in the very top code cell.  Ensure that x_beam_width, z_beam_height, beam_x_offset, beam_z_offset, etc. are consistent with X_BEAM_WIDTH, Z_BEAM_HEIGHT, BEAM_X_OFFSET, BEAM_Z_OFFSET, etc. from 02_ray_tracing_rect_beam.slurm.  
+
+Once you are ready to go, go to Kernel / Restart Kernal and Run All Cells, and give it a few minutes.  
+
+You should see a plot of the 3D e- density mesh with the laser beam cross-section overlaid as a green dashed box, and then 3 grayscale plots.  "s0" is a plot of all the rays at the entrance of the 3D e- density mesh, where they were initialized (in this case, at y=-20 mm).  "rf" is a plot of the rays at the exit of the 3D e- density mesh, after they have completed their traced paths (in this case, at y=+20 mm).  "focused" is the actual shadowgraph which takes into account ray-transfer-matrix (RTM) analysis, propagating the exiting rays onto a desired y=? mm imaging plane, accounting for a finite-sized lens.  
+
+The lens parameters, shadowgraph resolution and vmin/vmax counts/pixel, etc. can all be changed at the very top/first coding cell in this Jupyter Notebook.  
 
 ## 4/3: You are done!  
